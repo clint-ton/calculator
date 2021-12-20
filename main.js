@@ -6,6 +6,14 @@ const buttonLabels = [
     ['0', '.', '=', '+'],
 ]
 
+const buttonColors = [
+    ['grey', 'grey', 'grey', 'yellow'],
+    ['blue', 'blue', 'blue', 'yellow'],
+    ['blue', 'blue', 'blue', 'yellow'],
+    ['blue', 'blue', 'blue', 'yellow'],
+    ['blue', 'blue', 'yellow', 'yellow'],
+]
+
 function add (x, y) {
     return x + y;
 }
@@ -49,7 +57,8 @@ function drawKeypad () {
         for (let j = 0; j < 4; j++) {
             const button = document.createElement('button');
             button.textContent = buttonLabels[i][j];
-            row.appendChild(button);
+            button.setAttribute('style', `background-color: ${buttonColors[i][j]}`);    
+            row.appendChild(button)
         }
         buttons.appendChild(row);
     }
