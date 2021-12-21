@@ -1,2 +1,3 @@
 hookup buttons
 refactor multiple arrays for button info into one array with objects
+change button colors
